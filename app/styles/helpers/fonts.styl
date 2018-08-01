@@ -1,2 +1,14 @@
-font-fase(desc-font, desc-font, fontello)
-font-fase(FuturaBookCyr, FuturaBookCyr, futurabookc-webfont)
+font-fase(fontFamily, folder, fontName)
+	@font-face
+		font-family fontFamily
+		src url('../fonts/' + folder +'/' + fontName + '.eot') /* IE9 Compat Modes */
+		src url('../fonts/' + folder +'/' + fontName + '?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/' + folder +'/' + fontName + '.woff2' ) format('woff2'), /* Super Modern Browsers */
+				url('../fonts/' + folder +'/' + fontName + '.woff') format('woff'), /* Pretty Modern Browsers */
+				url('../fonts/' + folder +'/' + fontName + '.ttf') format('truetype'), /* Safari, Android, iOS */
+				url('../fonts/' + folder +'/' + fontName + '.svg#svgFontName') format('svg') /* Legacy iOS */
+
+font-fase(ProximaNovaBold, ProximaNova-Bold, ProximaNova-Bold)
+font-fase(ProximaNovaSemibold, ProximaNova-Semibold, ProximaNova-Semibold)
+font-fase(ProximaNovaTThin, ProximaNovaT-Thin, ProximaNovaT-Thin)
+font-fase(ProximaNovaRegular, ProximaNova-Regular, ProximaNova-Regular)

@@ -1,6 +1,12 @@
 extends /blocks/layout-default/layout-default
+include /blocks/section/section
+include /blocks/container/container
+include /blocks/page-head/page-head
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Hawking School';
 
 block content
+	+section._page-head
+		+container
+			+page-head

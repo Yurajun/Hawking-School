@@ -1,3 +1,22 @@
 mixin nav()
-	+b.nav&attributes(attributes)
+	+b.NAV.nav&attributes(attributes)
 		block
+
+		+e.item
+			+e('a')(href="about-us.html") О нас
+		+e.item
+			+e('a')(href="javascript:;") Курсы
+			+e.submenu
+				+e.submenu-item
+					+e('a')(href="contacts") Менеджер проектов
+				+e.submenu-item
+					+e('a')(href="contacts") SEO
+						+e('span') СКОРО!
+				+e.submenu-item
+					+e('a')(href="contacts") Контекст
+						+e('span') СКОРО!
+				+e.submenu-item
+					+e('a')(href="contacts") Программист <br />1С Битрикс
+						+e('span') СКОРО!
+		+e.item
+			+e('a')(href="contacts") Контакты
