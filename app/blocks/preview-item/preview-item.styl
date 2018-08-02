@@ -1,0 +1,38 @@
+.preview-item
+	margin 0 auto
+	display flex
+	width 910px
+	+d()
+		margin-bottom 60px
+
+	&__img
+		position relative
+		display flex
+		flex-shrink 0
+		justify-content center
+
+		span
+			position absolute
+			top 50%
+			left 50%
+			font-family $pnt
+			font-size 72px
+			color $red
+			transform translateY(-40%)
+
+
+	&__desc
+		padding-left 49px
+		+d()
+			padding-top 8px
+		h3
+			margin-bottom 15px
+			font-family $pnb
+			font-size 24px
+			color $white
+
+		p
+			font-family $pnr
+			font-size 18px
+			line-height 1.667
+			color $white

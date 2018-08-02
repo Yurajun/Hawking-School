@@ -1,3 +1,9 @@
-mixin preview()
+include ../preview-item/preview-item
+
+mixin preview(arr)
 	+b.preview&attributes(attributes)
 		block
+		- var n = 0;
+		each val in arr
+			- n++;
+			+preview-item(val, n)

@@ -1,9 +1,10 @@
 .page-head
 	margin 0 auto
+	padding 70px 0
 	display block
-	height 346px
 
 	h1
+		margin-bottom 60px
 		font-family $pnb
 		font-size 48px
 		line-height 1.2
@@ -13,3 +14,19 @@
 		span
 			font-family $pnr
 			font-size inherit
+
+	a
+		margin 0 auto
+		display flex
+		font-family $pnr
+		text-decoration none
+		color $white
+		background-color $main_red
+		border-radius 26px
+		justify-content center
+		align-items center
+		size(185px, 45px)
+		transition background-color .25s
+
+		&:hover
+			background-color $main_red - 15%

@@ -2,6 +2,9 @@ extends /blocks/layout-default/layout-default
 include /blocks/section/section
 include /blocks/container/container
 include /blocks/page-head/page-head
+include /blocks/about/about
+include /blocks/preview/preview
+include /blocks/courses/courses
 
 block head
 	- var pageTitle = 'Hawking School';
@@ -10,3 +13,15 @@ block content
 	+section._page-head
 		+container
 			+page-head
+
+	+section._about
+		+container
+			+about('О нас')
+
+	+section._preview
+		+container
+			+preview(getData('preview'))
+
+	+section._courses
+		+container
+			+courses('Популярные курсы', getData('courses'))

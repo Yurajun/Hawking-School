@@ -1,0 +1,46 @@
+{
+	"0": {
+		"direction": "управление",
+		"specialty": "Менеджер digital-проектов",
+		"date_start": "26 сентября",
+		"duration_time": "2 месяца",
+		"number_lessons": "Подробнее",
+		"days_left": "Осталось 10 дней",
+		"button_detail": "подробнее",
+		"soon": "",
+		"pre_set": ""
+	},
+	"1": {
+		"direction": "Маркетинг",
+		"specialty": "Контент-маркетолог",
+		"date_start": "",
+		"duration_time": "",
+		"number_lessons": "",
+		"days_left": "",
+		"button_detail": "",
+		"soon": "Открыт предварительный набор! <a href='javascript:;'>Оставьте заявку</a> и получите скидку 30%!",
+		"pre_set": "Скоро!"
+	},
+	"2": {
+		"direction": "Маркетинг",
+		"specialty": "Менеджер по контекстной рекламе",
+		"date_start": "",
+		"duration_time": "",
+		"number_lessons": "",
+		"days_left": "",
+		"button_detail": "",
+		"soon": "Открыт предварительный набор! <a href='javascript:;'>Оставьте заявку</a> и получите скидку 30%!",
+		"pre_set": "Скоро!"
+	},
+	"3": {
+		"direction": "Программирование",
+		"specialty": "SMM-специалист",
+		"date_start": "",
+		"duration_time": "",
+		"number_lessons": "",
+		"days_left": "",
+		"button_detail": "",
+		"soon": "Открыт предварительный набор! <a href='javascript:;'>Оставьте заявку</a> и получите скидку 30%!",
+		"pre_set": "Скоро!"
+	}
+}

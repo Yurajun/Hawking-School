@@ -1,0 +1,22 @@
+mixin preview-item(val, n)
+	+b.preview-item&attributes(attributes)
+		block
+
+		+e('picture').img.js-picture-img
+			+e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)")
+			+e('source')(srcset="assets/images/#{val['imgs'][1]} 2x, assets/images/#{val['imgs'][0]} 1x")
+			+e('img')(src="assets/images/#{val['imgs'][0]}")
+					//-+e(class="img_#{key}")
+						style(type='text/css').
+							.preview-item__img_#{key} {
+								background-image: url('assets/images/#{val['imgs'][0]}');
+							}
+							@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+								.preview-item__img_#{key} {
+									background-image: url('assets/images/#{val['imgs'][1]}');
+								}
+							}
+			+e('span') 0#{n}
+		+e.desc
+			+e('h3') #{val['title']}
+			+e('p') #{val['text']}

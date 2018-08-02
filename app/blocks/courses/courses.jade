@@ -1,3 +1,21 @@
-mixin courses()
+include ../second-title/second-title
+include ../courses-slider/courses-slider
+
+mixin courses(title, arr)
 	+b.courses&attributes(attributes)
 		block
+
+		+second-title(title)
+
+		+courses-slider.js-courses-slider
+			each val in arr
+				+b.course-item
+					+e.wrapper-content
+						+e.direction #{val['direction']}
+						+e.speciality #{val['specialty']}
+						+e.date-start #{val['date_start']}
+						+e.duration-time #{val['duration_time']}
+						+e.number-lessons #{val['number_lessons']}
+						+e.soon !{val['soon']}
+						+e.pre-set #{val['pre_set']}
+					+e.days-left #{val['days_left']}
