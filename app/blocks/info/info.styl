@@ -1,2 +1,27 @@
 .info
 	display block
+	background-color $main_black
+	+d()
+		padding 90px 190px 90px 90px
+
+	&__item
+		display flex
+		align-items center
+		+d()
+			margin-bottom 22px
+
+		&:last-of-type
+			margin-bottom 0
+
+	&__img
+		display flex
+		flex-shrink 0
+		justify-content center
+
+	&__desc
+		font-family $pnr
+		font-size 18px
+		line-height 1.2
+		color $white
+		+d()
+			margin-left 48px

@@ -1,41 +1,10 @@
 include ../second-title/second-title
 include ../courses-slider/courses-slider
 
-mixin courses(title, arr)
+mixin courses(title)
 	+b.courses&attributes(attributes)
 		block
 
 		+second-title(title)._courses._line-t._line-m
 
-		+courses-slider.js-courses-slider
-			each val in arr
-
-				+e.wrapp-item
-					+b.course-item.js-course-item
-
-						if (val['direction'])
-							+e('span').direction #{val['direction']}
-
-						if (val['specialty'])
-							+e('p').speciality !{val['specialty']}
-
-						if (val['date_start'])
-							+e('p').date_start #{val['date_start']}
-
-						if (val['duration_time'])
-							+e('p').date_time #{val['duration_time']}
-
-						if (val['number_lessons'])
-							+e('p').date_lessons #{val['number_lessons']}
-
-						if (val['button_detail'])
-							+e('button').button-detail #{val['button_detail']}
-
-						if (val['soon'])
-							+e.soon !{val['soon']}
-
-						if (val['pre_set'])
-							+e.pre-set #{val['pre_set']}
-
-						if (val['days_left'])
-							+e.days-left #{val['days_left']}
+		+courses-slider(getData('courses')).js-courses-slider

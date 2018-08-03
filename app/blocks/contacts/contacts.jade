@@ -1,11 +1,15 @@
-include ../second-title/second-title
 include ../info/info
+include ../map/map
+include ../second-title/second-title
 
-mixin contacts(title)
+mixin contacts(title, arr)
 	+b.contacts&attributes(attributes)
 		block
 
 		+second-title(title)._about-us._line-t._line-m
 
 		+e.wrapper-section
-			+info
+			+e.wrapper-info
+				+info(arr)
+			+e.wrapper-map
+				+map

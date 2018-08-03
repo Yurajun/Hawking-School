@@ -2,6 +2,8 @@
 
 import {maxWidth}from '../functions-js/function';
 
-const $img = $('.js-picture-img');
+const $img = $('.js-picture-icon');
 
 $img.css('width', maxWidth($img) + 'px');
+
+console.log(maxWidth($img));
