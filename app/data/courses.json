@@ -1,10 +1,10 @@
 {
 	"0": {
 		"direction": "управление",
-		"specialty": "Менеджер digital-проектов",
+		"specialty": "Менеджер digital&nbsp;&mdash;&nbsp;проектов",
 		"date_start": "26 сентября",
 		"duration_time": "2 месяца",
-		"number_lessons": "Подробнее",
+		"number_lessons": "20 занятий",
 		"days_left": "Осталось 10 дней",
 		"button_detail": "подробнее",
 		"soon": "",
@@ -12,7 +12,7 @@
 	},
 	"1": {
 		"direction": "Маркетинг",
-		"specialty": "Контент-маркетолог",
+		"specialty": "Контент&nbsp;&mdash;&nbsp;маркетолог",
 		"date_start": "",
 		"duration_time": "",
 		"number_lessons": "",
@@ -34,7 +34,7 @@
 	},
 	"3": {
 		"direction": "Программирование",
-		"specialty": "SMM-специалист",
+		"specialty": "SMM&nbsp;&mdash;&nbsp;специалист",
 		"date_start": "",
 		"duration_time": "",
 		"number_lessons": "",

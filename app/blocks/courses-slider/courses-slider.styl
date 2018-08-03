@@ -1,7 +1,120 @@
 .courses-slider
-	display block
+	+t()
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+	+d()
+		display flex
+		justify-content space-between
+
+	&__wrapp-item
+		width 100%
+
+		+t()
+			width 50%
 
 .course-item
+	position relative
+	// margin-bottom 32px
+	width 280px
+	height 100%
+	border 1px solid $black_brown
+
+	+t()
+		padding 52px 30px 50px 28px
+
 	+d()
-		// width 280px
-		border 1px solid $black_brown
+		padding 52px 30px 30px 28px
+
+
+	&__direction
+		position absolute
+		top 0
+		padding 12px
+		text-transform uppercase
+		color $white
+		background-color $main_red
+		transform translateY(-50%)
+
+	&__speciality
+		margin-bottom 36px
+		font-family $pnb
+		font-size 18px
+		line-height 1.2
+		color $black
+
+	&__date
+		position relative
+		margin-bottom 33px
+		padding-left 60px
+		font-family $pnr
+		font-size 14px
+		color $black
+
+		&:before
+			position absolute
+			left 0
+			content ''
+			background-repeat no-repeat
+			background-position center center
+			background-size cover
+			transform translateY(-25%)
+
+		&_start:before
+			size(24px, 27px)
+			retinaBackground('icon-date', 'png')
+		&_time:before
+			size(24px)
+			retinaBackground('icon-clock', 'png')
+		&_lessons:before
+			size(26px, 21px)
+			retinaBackground('icon-folder', 'png')
+
+	&__button-detail
+		margin 0 auto
+		display block
+		font-family $pnr
+		font-size 16px
+		color $black_brown
+		background-color $white
+		border 1px solid $main_black
+		border-radius 21px
+		outline none
+		size(150px, 42px)
+
+	&__days-left
+		position absolute
+		left 50%
+		bottom -32px
+		font-family $psb
+		font-size 14px
+		text-transform uppercase
+		color $red
+		transform translateX(-50%)
+
+	&__soon
+		margin-bottom 30px
+		font-family $pnr
+		font-size 14px
+		line-height 1.286
+		color $black
+
+		a
+			position relative
+			text-decoration none
+			color $red
+			&:after
+				position absolute
+				right 0
+				left 0
+				bottom 0
+				height 1px
+				content ''
+				background-color $red
+				opacity .7
+
+	&__pre-set
+		font-family $psb
+		font-size 14px
+		text-transform uppercase
+		color $red
