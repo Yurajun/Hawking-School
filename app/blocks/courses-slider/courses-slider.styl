@@ -2,7 +2,12 @@
 	+t()
 		display flex
 		flex-wrap wrap
-		justify-content space-between
+		@supports (display: grid)
+			display grid
+			grid-template-rows 1fr 1fr
+			grid-template-columns 1fr 1fr
+	+m()
+		display block
 	+d()
 		display flex
 		justify-content space-between
@@ -11,18 +16,72 @@
 		width 100%
 
 		+t()
+			margin-bottom 37px
+			display flex
 			width 50%
+			justify-content center
+			@supports (display: grid)
+				margin 0 auto 37px
+				display block
+				width auto
+				justify-content center
+		+m()
+			margin-bottom 20px
+			display block
+			width 100%
+
+	.slick-arrow
+		position absolute
+		top 50%
+		font-size 0
+		line-height 0
+		color transparent
+		background-color transparent
+		border 3px solid $main_red
+		outline none
+		transform translate(0, -50%) rotate(-45deg)
+		size(24px)
+
+	.slick-prev
+		left 0
+		border-right none
+		border-bottom none
+
+	.slick-next
+		right 0
+		border-top none
+		border-left none
+
+	.slick-dots
+		text-align center
+		li
+			display inline-block
+			button
+				margin 0 6px
+				font-size 0
+				line-height 0
+				background-color $main_white
+				border 1px solid $main_black
+				border-radius 50%
+				size(10px)
+		li.slick-active
+			button
+				background-color $main_red
+				border-color $main_red
 
 .course-item
 	position relative
-	// margin-bottom 32px
 	width 280px
 	height 100%
 	border 1px solid $black_brown
 
 	+t()
-		padding 52px 30px 50px 28px
-
+		padding 52px 30px 20px 28px
+	+m()
+		margin 18px auto 0
+		width calc(100% - 60px)
+		min-width 230px
+		max-width 280px
 	+d()
 		padding 52px 30px 30px 28px
 
@@ -35,13 +94,20 @@
 		color $white
 		background-color $main_red
 		transform translateY(-50%)
+		+m()
+			left 50%
+			padding 11px 13px
+			transform translate(-50%, -50%)
 
 	&__speciality
 		margin-bottom 36px
 		font-family $pnb
-		font-size 18px
 		line-height 1.2
 		color $black
+		+t()
+			font-size 16px
+		+d()
+			font-size 18px
 
 	&__date
 		position relative
@@ -70,7 +136,7 @@
 			size(26px, 21px)
 			retinaBackground('icon-folder', 'png')
 
-	&__button-detail
+	&__button-detail // подробнее
 		margin 0 auto
 		display block
 		font-family $pnr
@@ -81,16 +147,22 @@
 		border-radius 21px
 		outline none
 		size(150px, 42px)
+		+t()
+			margin-bottom 20px
 
 	&__days-left
-		position absolute
-		left 50%
-		bottom -32px
 		font-family $psb
-		font-size 14px
+		text-align center
 		text-transform uppercase
 		color $red
-		transform translateX(-50%)
+		+t()
+			position relative
+		+d()
+			position absolute
+			left 50%
+			bottom -32px
+			font-size 14px
+			transform translateX(-50%)
 
 	&__soon
 		margin-bottom 30px
@@ -113,7 +185,7 @@
 				background-color $red
 				opacity .7
 
-	&__pre-set
+	&__pre-set // Скоро!
 		font-family $psb
 		font-size 14px
 		text-transform uppercase

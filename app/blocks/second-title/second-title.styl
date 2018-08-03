@@ -5,23 +5,64 @@
 	text-transform uppercase
 	color $black_brown
 
-	&_line
-		position relative
-		padding-bottom 19px
+	&_line-d
+		+d()
+			position relative
+			padding-bottom 19px
 
 		&:after
-			position absolute
-			left 50%
-			bottom 0
-			content ''
-			background-color $main_red
-			transform translateX(-50%)
-			size(32px, 5px)
+			+d()
+				position absolute
+				left 50%
+				bottom 0
+				content ''
+				background-color $main_red
+				transform translateX(-50%)
+				size(32px, 5px)
+
+	&_line-t
+		+t()
+			position relative
+			padding-bottom 19px
+		+m()
+			padding-bottom 0
+
+		&:after
+			+t()
+				position absolute
+				left 50%
+				bottom 0
+				content ''
+				background-color $main_red
+				transform translateX(-50%)
+				size(32px, 5px)
+			+m()
+				content none
+
+	&_line-m
+		+m()
+			position relative
+			padding-bottom 19px
+
+		&:after
+			+m()
+				position absolute
+				left 50%
+				bottom 0
+				content ''
+				background-color $main_red
+				transform translateX(-50%)
+				size(32px, 5px)
+
 
 	&_about-us
 		+d()
 			margin-bottom 13px
 
 	&_courses
+		+t()
+			margin-bottom 40px
+		+m()
+			margin-bottom 33px
 		+d()
 			margin-bottom 59px

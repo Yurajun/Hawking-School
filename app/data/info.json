@@ -1,0 +1,14 @@
+{
+	"adress": {
+		"adress": "г. Владимир, ул. Мира, д. 2г, пом.3 (Парк \"Университет\")",
+		"icon": ["icon-pin.png", "icon-pin@2x.png"]
+	},
+	"phone": {
+		"phone": "+7 (4922) 21-32-39",
+		"icon": ["icon-phone.png", "icon-phone@2x.png"]
+	},
+	"email": {
+		"email": "info@test.ru",
+		"icon": ["icon-mail.png", "icon-mail@2x.png"]
+	}
+}

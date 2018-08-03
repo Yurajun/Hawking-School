@@ -5,6 +5,7 @@ include /blocks/page-head/page-head
 include /blocks/about/about
 include /blocks/preview/preview
 include /blocks/courses/courses
+include /blocks/contacts/contacts
 
 block head
 	- var pageTitle = 'Hawking School';
@@ -25,3 +26,7 @@ block content
 	+section._courses
 		+container
 			+courses('Популярные курсы', getData('courses'))
+
+	+section._contacts
+		+container
+			+contacts('Контакты')

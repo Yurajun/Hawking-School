@@ -1,33 +1,50 @@
 /* global $ */
 
-// import 'slick-carousel';
+import 'slick-carousel';
+import {isTabletSmall, isMobileSmall}from '../page/test-dispaly';
 
-// $('.js-courses-slider').slick({
-// 	slidesToShow: 4
-// 	// responsive: [{
-// 	// 	breakpoint: 2000,
-// 	// 	settings: {
-// 	// 		slidesToShow: 4,
-// 	// 		infinite: true
-// 	// 	}
-// 	// }]
-// });
+const slider = () => {
+	if (isMobileSmall()) {
+		if (!$('.js-courses-slider').is('.slick-slider')) {
+			$('.js-courses-slider').slick({
+				dots: true
+			});
+		}
+	}else if ($('.js-courses-slider').is('.slick-slider')){
+		$('.js-courses-slider').slick('unslick');
+	}
+};
+
+// const slider = () => {
+// 	if (isMobileSmall() && !$('.js-courses-slider').is('.slick-slider')) {
+// 		$('.js-courses-slider').slick();
+// 	}else if ($('.js-courses-slider').is('.slick-slider')){
+// 		$('.js-courses-slider').slick('unslick');
+// 	}
+// };
 
 const $courseItem = $('.js-course-item');
+const $coursesSlider = $('.js-courses-slider');
 
-if ($(window).width() > 767 && $(window).width() < 1280){
-	const maxHeight = Math.max.apply(null, Array.from($courseItem.map((ind, el) => $(el).outerHeight())));
-	$courseItem.css('height', maxHeight + 'px');
-}
+// console.log($coursesSlider.css('display'));
+
+const maxHeightCourseSlide = () => {
+	if ((isTabletSmall() || isMobileSmall()) && $coursesSlider.css('display') === 'flex'){
+		if (!$courseItem.is('.is-const-height')){
+			const maxHeight = Math.max.apply(null, Array.from($courseItem.map((ind, el) => $(el).outerHeight())));
+			$courseItem.css('height', maxHeight + 'px').addClass('is-const-height');
+		}
+	}else if ($courseItem.is('.is-const-height')){
+		$courseItem.css('height', '100%').removeClass('is-const-height');
+	}
+};
+
+slider();
+maxHeightCourseSlide();
 
 $(window).on('resize', () => {
-
-	const windowWidth = $(window).width();
-	console.log(windowWidth);
-	if (windowWidth > 767 && windowWidth < 1280){
-		const maxHeight = Math.max.apply(null, Array.from($courseItem.map((ind, el) => $(el).outerHeight())));
-		$courseItem.css('height', maxHeight + 'px');
-	}else {
-		$courseItem.css('height', '100%');
-	}
+	slider();
+	maxHeightCourseSlide();
 });
+
+

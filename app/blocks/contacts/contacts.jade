@@ -1,3 +1,11 @@
-mixin contacts()
+include ../second-title/second-title
+include ../info/info
+
+mixin contacts(title)
 	+b.contacts&attributes(attributes)
 		block
+
+		+second-title(title)._about-us._line-t._line-m
+
+		+e.wrapper-section
+			+info
