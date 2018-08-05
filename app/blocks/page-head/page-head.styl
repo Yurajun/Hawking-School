@@ -2,8 +2,11 @@
 	margin 0 auto
 	padding 70px 0
 	display block
+	background-image linear-gradient(to right, #2d062d, #b5b66d)
 
 	h1
+		position relative
+		z-index 20
 		margin-bottom 60px
 		font-family $pnb
 		font-size 48px
@@ -16,17 +19,21 @@
 			font-size inherit
 
 	a
+		position relative
+		z-index 20
 		margin 0 auto
-		display flex
 		font-family $pnr
 		text-decoration none
 		color $white
 		background-color $main_red
 		border-radius 26px
+		transition background-color .25s
+		size(185px, 45px)
+	a
+		display flex
 		justify-content center
 		align-items center
-		size(185px, 45px)
-		transition background-color .25s
+		
 
 		&:hover
 			background-color $main_red - 15%

@@ -1,15 +1,17 @@
 include ../info/info
 include ../map/map
 include ../second-title/second-title
+include ../order-bg/order-bg
 
 mixin contacts(title, arr)
 	+b.contacts&attributes(attributes)
 		block
 
-		+second-title(title)._about-us._line-t._line-m
+		+second-title(title)._contacts._line-t._line-m
 
 		+e.wrapper-section
+			+order-bg
 			+e.wrapper-info
 				+info(arr)
 			+e.wrapper-map
-				+map
+				+map#map

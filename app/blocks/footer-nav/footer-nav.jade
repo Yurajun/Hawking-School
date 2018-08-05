@@ -1,0 +1,19 @@
+mixin footer-nav()
+	+b.NAV.footer-nav&attributes(attributes)
+		block
+
+		+e('h3').title-menu Курсы
+
+		+e('ul').list
+			+e('li').list-item
+				+e('a')(href="javascript:;")
+					| Менеджер digital-проектов
+			+e('li').list-item
+				+e('a')(href="javascript:;")
+					| Менеджер по контекстной рекламе
+			+e('li').list-item
+				+e('a')(href="javascript:;")
+					| Контент-маркетолог
+			+e('li').list-item
+				+e('a')(href="javascript:;")
+					| SMM-специалист

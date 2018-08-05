@@ -1,9 +1,19 @@
 .nav
-	display flex
-	width 398px
+	position relative
+	z-index 21
 	height 100%
-	justify-content space-between
-	align-items center
+
+	&__title-nav
+		font-size 0
+		line-height 0
+		text-indent -1000em
+
+	&__list
+		display flex
+		width 398px
+		height 100%
+		justify-content space-between
+		align-items center
 
 	&__item
 		position relative
@@ -11,26 +21,92 @@
 		height 100%
 		align-items center
 
-	&__item:nth-of-type(2)>a:after
-			position absolute
-			right 0
-			content ''
-			size(16px, 7px)
-			retinaBackground(arrow_down, png)
-
-		a
+		&>a
 			position relative
 			font-family $psb
 			font-size 16px
 			text-decoration none
 			color $white
+			transition color .25s
 
-	&__item:hover &__submenu
-			display block
+	a:hover
+		color $red
+
+	&__item:nth-of-type(2)>a
+		padding-right 22px
+
+	&__item:nth-of-type(2)>a:after
+			position absolute
+			top 5px
+			right 0
+			content ''
+			background-repeat no-repeat
+			background-position 0 100%
+			transition transform .25s, background-position .25s
+			transform scale(1)
+			size(16px, 7px)
+			retinaBackground(arrow_down, png)
 
 	&__submenu
 		position absolute
+		z-index 1
 		top 100%
-		display none
+		left 0
+		padding-x(24px)
+		display block
+		overflow hidden
+		width 280px
+		height 0
 		background-color $main_black
+		transition height .25s linear 0s, padding .25s linear 0s
+
+		&-item
+			padding-y(10px)
+			display flex
+			width 100%
+			justify-content space-between
+			align-items flex-start
+
+			a
+				display inline-block
+				line-height 1.2
+				text-decoration none
+
+				span
+					position relative
+					text-transform capitalize
+					color $white
+					transition color .25s
+
+				span:after
+					position absolute
+					right 0
+					left 0
+					bottom 0
+					height 1px
+					content ''
+					background-color $main_white - 40%
+
+				&:hover span
+					color $red
+				&:hover span:after
+					background-color $main_red - 40%
+
+
+			span
+				font-family $psb
+				font-size 16px
+				text-transform uppercase
+				color $red
+
+
+	&__item:hover &__submenu
+		padding-y(10px)
+		overflow visible
+		height auto
+
+	&__item:hover>a:after
+		top 6px
+		background-position 0 0
+		transform scale(-1)
 

@@ -1,3 +1,23 @@
 mixin social-network()
 	+b.social-network&attributes(attributes)
 		block
+
+		+e.social-wrapper
+
+			+b.social-block
+				+e('p') Мы в социальных сетях:
+				+e.list
+					+e('a')(href="javascript").list-item_vk
+					+e('a')(href="javascript").list-item_inst
+
+		+e.links-wrapper
+			+b('ul').helper-links
+				+e('li').item
+					| Сайт создан в
+					+e('a')(href="javascript:;") Hawking Brothers
+
+				+e('li').item
+					+e('a')(href="javascript:;") Политика конфиденциальности
+
+				+e('li').item
+					+e('a')(href="javascript:;") Договор оферты

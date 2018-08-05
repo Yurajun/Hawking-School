@@ -1,2 +1,63 @@
 .social-network
 	display block
+	
+	&__social-wrapper
+		margin-bottom 20px
+
+
+.social-block
+	display flex
+	align-items center
+
+	p
+		font-family $pnr
+		font-size 16px
+		color $black
+
+	&__list
+		display flex
+		align-items center
+
+	&__list-item_vk
+		margin-left 7px
+		size(25px, 15px)
+		retinaBackground('icon-vk', 'png')
+
+	&__list-item_inst
+		margin-left 12px
+		size(20px, 20px)
+		retinaBackground('icon-inst', 'png')
+
+
+.helper-links
+	&__item
+		margin-bottom 20px
+		font-family $pnr
+		font-size 16px
+		color $black
+		opacity .8
+
+		&:last-of-type
+			margin-bottom 0
+
+		a
+			position relative
+			text-decoration none
+			color $black
+			transition color .25s
+
+			&:after
+				position absolute
+				right 0
+				left 0
+				bottom 0
+				height 1px
+				content ''
+				background-color $main_black + 70%
+				transition background-color .25s
+
+			&:hover
+				color $red
+
+			&:hover:after
+				background-color $red + 70%

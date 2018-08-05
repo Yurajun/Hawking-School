@@ -2,9 +2,11 @@ mixin preview-item(val, n)
 	+b.preview-item&attributes(attributes)
 		block
 
-		+e('picture').img.js-picture-img
-			+e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" srcset="assets/images/#{val['imgs'][1]}")
-			+e('img')(src="assets/images/#{val['imgs'][0]}")
+		+e.picture-wrapper
+			+e('span') 0#{n}
+			+e('picture').img.js-picture-img
+				+e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" srcset="assets/images/#{val['imgs'][1]}")
+				+e('img')(src="assets/images/#{val['imgs'][0]}")
 					//-+e(class="img_#{key}")
 						style(type='text/css').
 							.preview-item__img_#{key} {
@@ -15,7 +17,7 @@ mixin preview-item(val, n)
 									background-image: url('assets/images/#{val['imgs'][1]}');
 								}
 							}
-			+e('span') 0#{n}
+			
 		+e.desc
 			+e('h3') #{val['title']}
 			+e('p') #{val['text']}

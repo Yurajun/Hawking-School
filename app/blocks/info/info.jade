@@ -7,5 +7,5 @@ mixin info(arr)
 				+e('picture').img.js-picture-icon
 					+e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" srcset="assets/images/#{val['icon'][1]}")
 					+e('img')(src="assets/images/#{val['icon'][0]}")
-				+e('p').desc
-					| #{val[key]}
+				+e.desc
+					| !{val[key]}

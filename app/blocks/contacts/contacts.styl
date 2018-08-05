@@ -2,9 +2,19 @@
 	display block
 
 	&__wrapper-section
+		position relative
 		display flex
 		justify-content stretch
 
-	&__wrapper-info, &__wrapper-map
+	&__wrapper-info
+		position relative
+		z-index 9
 		width 50%
 		flex-shrink 0
+
+	&__wrapper-map
+		position absolute
+		top 0
+		right 0
+		left 0
+		bottom 0

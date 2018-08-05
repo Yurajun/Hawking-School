@@ -19,9 +19,36 @@
 		justify-content center
 
 	&__desc
-		font-family $pnr
-		font-size 18px
-		line-height 1.2
-		color $white
 		+d()
 			margin-left 48px
+
+		p
+			font-family $pnr
+			font-size 18px
+			line-height 1.2
+			color $white
+
+		a
+			position relative
+			font-family $pnr
+			font-size 18px
+			line-height 1.2
+			text-decoration none
+			color $white
+			transition color .25s
+
+			&:after
+				position absolute
+				right 0
+				left 0
+				bottom 0
+				height 1px
+				content ''
+				background-color $main_white - 40%
+				transition background-color .25s
+
+			&:hover
+				color $red
+
+			&:hover:after
+				background-color $main_red - 40%

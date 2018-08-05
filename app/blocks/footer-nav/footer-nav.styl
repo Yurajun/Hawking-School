@@ -1,0 +1,45 @@
+.footer-nav
+	display block
+	+d()
+		padding-right 48px
+
+
+	&__title-menu
+		margin-bottom 20px
+		font-family $pnb
+		font-size 16px
+		text-transform uppercase
+		color $black
+
+	&__list
+		display flex
+		flex-wrap wrap
+
+	&__list-item
+		margin-bottom 19px
+		width 50%
+
+		a
+			position relative
+			font-family $psb
+			font-size 16px
+			text-decoration none
+			text-transform capitalize
+			color $black
+			transition color .25s
+
+			&:after
+				position absolute
+				right 0
+				left 0
+				bottom 0
+				height 1px
+				content ''
+				background-color $main_black + 70%
+				transition color .25s
+
+			&:hover
+				color $red
+
+			&:hover:after
+				background-color $main_red + 70%

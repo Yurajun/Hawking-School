@@ -8,3 +8,5 @@ $(() => {
 import '../blocks/preview-item/preview-item';
 import '../blocks/info/info';
 import '../blocks/courses-slider/courses-slider';
+import '../blocks/page-head/page-head';
+import '../blocks/map/map';

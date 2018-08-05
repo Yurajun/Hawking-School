@@ -125,6 +125,8 @@
   },
   "dependencies": {
     "eslint-plugin-pug": "^1.1.1",
+    "heatmap.js": "^2.0.5",
+    "remodal": "^1.1.1",
     "slick-carousel": "^1.8.1"
   }
 }

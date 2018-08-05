@@ -5,11 +5,11 @@
 	+d()
 		margin-bottom 60px
 
-	&__img
+	&:last-of-type
+		margin-bottom 0
+
+	&__picture-wrapper
 		position relative
-		display flex
-		flex-shrink 0
-		justify-content center
 
 		span
 			position absolute
@@ -20,6 +20,10 @@
 			color $red
 			transform translateY(-40%)
 
+	&__img
+		display flex
+		flex-shrink 0
+		justify-content center
 
 	&__desc
 		padding-left 49px

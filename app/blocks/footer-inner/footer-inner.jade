@@ -1,0 +1,11 @@
+mixin footer-inner()
+	+b.footer-inner&attributes(attributes)
+		block
+
+		+e.container-logo
+			+logo._black._footer-margin
+			+copyright
+		+e.container-nav
+			+footer-nav
+		+e.container-network
+			+social-network

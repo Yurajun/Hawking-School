@@ -1,3 +1,12 @@
+include ../logo/logo
+include ../footer-inner/footer-inner
+include ../copyright/copyright
+include ../footer-nav/footer-nav
+include ../social-network/social-network
+
 mixin footer()
-	+b.footer&attributes(attributes)
+	+b.FOOTER.footer&attributes(attributes)
 		block
+
+		+container
+			+footer-inner

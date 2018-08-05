@@ -1,17 +1,20 @@
 extends /blocks/layout-default/layout-default
 include /blocks/section/section
+include /blocks/main/main
+include /blocks/article/article
 include /blocks/container/container
 include /blocks/page-head/page-head
 include /blocks/about/about
 include /blocks/preview/preview
 include /blocks/courses/courses
 include /blocks/contacts/contacts
+include /blocks/footer/footer
 
 block head
 	- var pageTitle = 'Hawking School';
 
 block content
-	+section._page-head
+	+main._page-head
 		+container
 			+page-head
 
@@ -30,5 +33,3 @@ block content
 	+section._contacts
 		+container
 			+contacts('Контакты', getData('info'))
-
-	+section._red-line

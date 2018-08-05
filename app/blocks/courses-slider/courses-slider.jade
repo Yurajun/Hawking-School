@@ -10,7 +10,7 @@ mixin courses-slider(arr)
 						+e('span').direction #{val['direction']}
 
 					if (val['specialty'])
-						+e('p').speciality !{val['specialty']}
+						+e('h3').speciality !{val['specialty']}
 
 					if (val['date_start'])
 						+e('p').date_start #{val['date_start']}
@@ -22,7 +22,8 @@ mixin courses-slider(arr)
 						+e('p').date_lessons #{val['number_lessons']}
 
 					if (val['button_detail'])
-						+e('button').button-detail #{val['button_detail']}
+						+e('button').button-detail
+							+e('span') #{val['button_detail']}
 
 					if (val['soon'])
 						+e.soon !{val['soon']}
