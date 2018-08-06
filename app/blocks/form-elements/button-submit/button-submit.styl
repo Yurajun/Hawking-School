@@ -1,0 +1,40 @@
+.button-submit
+	position relative
+	margin 0 auto
+	display block
+	overflow hidden
+	background-color transparent
+	border 1px solid $main_black
+	border-radius 21px
+	outline none
+	size(150px, 42px)
+	+t()
+		margin-bottom 20px
+
+	span
+		position relative
+		z-index 1
+		font-family $pnr
+		font-size 16px
+		color $black_brown
+		transition color .25s
+
+	&:before
+		position absolute
+		z-index 0
+		top 50%
+		left 50%
+		display block
+		content ''
+		background-color $white
+		border-radius 50%
+		transition transform .25s cubic-bezier(.9, .07, .77, .76), background-color .2s ease-in
+		transform translate(-50%, -50%) scale(0)
+		size(150px)
+
+	&:hover span
+		color $white
+
+	&:hover:before
+		background-color $red
+		transform translate(-50%, -50%) scale(1)

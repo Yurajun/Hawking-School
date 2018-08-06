@@ -1,0 +1,4 @@
+mixin button-submit(value)
+	+b.BUTTON.button-submit(type="submit")&attributes(attributes)
+		block
+		+e('span') #{value}

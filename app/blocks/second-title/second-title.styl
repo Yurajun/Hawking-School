@@ -54,6 +54,11 @@
 				transform translateX(-50%)
 				size(32px, 5px)
 
+	&_text-capitalize
+		text-transform lowercase
+	&_text-capitalize:first-letter
+		text-transform uppercase
+
 
 	&_about-us
 		+d()
@@ -70,3 +75,7 @@
 	&_contacts
 		+d()
 			margin-bottom 40px
+
+	&_require-question
+		+d()
+			margin-bottom 30px

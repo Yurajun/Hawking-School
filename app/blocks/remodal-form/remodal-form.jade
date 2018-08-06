@@ -1,0 +1,3 @@
+mixin remodal-form(method, validate, action)
+	+b.FORM.remodal-form(method="#{method}", data-validate="#{validate}" action="#{action}" )&attributes(attributes)
+		block

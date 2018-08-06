@@ -1,2 +1,36 @@
 .remodal
+	position relative
 	display inline-block
+
+	&_require-question
+		padding 30px
+		width 500px
+
+	&__close
+		position absolute
+		top 15px
+		right 15px
+		background-color transparent
+		border none
+		transform rotate(45deg)
+		size(21px)
+
+		&:before
+			position absolute
+			top 50%
+			right 0
+			left 0
+			height 2px
+			content ''
+			background-color $main_black
+			transform translateY(-50%)
+		&:after
+			position absolute
+			top 0
+			left 50%
+			bottom 0
+			width 2px
+			content ''
+			background-color $main_black
+			transform translateX(-50%)
+

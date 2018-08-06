@@ -1,0 +1,3 @@
+mixin input-phone(phone, placeholder, mask, required, autocomplete)
+	+b.INPUT.input-phone(type="text" name="#{phone}" placeholder="#{placeholder}" data-mask="#{mask}" required=required autocomplete="#{autocomplete}")&attributes(attributes)
+		block
