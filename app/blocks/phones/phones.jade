@@ -1,7 +1,13 @@
+include ../remodal/remodal
+include ../remodal-question/remodal-question
+
 mixin phones()
 	+b.phones&attributes(attributes)
 		block
 
-		+e('a')(href="#").question Задать вопрос
+		+e('a')(href="#" data-remodal-target="modal-question").question Задать вопрос
 		+e('a')(href="tel:+7 (4922) 21-32-39").tel
 			| +7 (4922) 21-32-39
+
+		+remodal('modal-question')
+			+remodal-question

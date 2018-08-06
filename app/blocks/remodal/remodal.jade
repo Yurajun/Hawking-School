@@ -1,0 +1,3 @@
+mixin remodal(modalName)
+	+b.remodal(data-remodal-id="#{modalName}" data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true, hashTracking: false")&attributes(attributes)
+		block
