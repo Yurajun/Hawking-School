@@ -60,5 +60,7 @@ $.validator.addMethod('js-phone-validation', function (value){
 }, 'Введите корректный номер телефона');
 
 $('.js-form[data-validate=Y]').each((ind, el) => {
-	$(el).validate();
+	$(el).validate({
+
+	});
 });

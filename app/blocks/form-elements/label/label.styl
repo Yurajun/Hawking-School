@@ -1,2 +1,55 @@
 .label
+	position relative
+	padding-left 43px
 	display block
+	font-family $pnr
+	font-size 14px
+	line-height 1.2
+	cursor pointer
+	user-select none
+	color $black_brown
+
+	&:before
+		position absolute
+		top 2px
+		left 0
+		content ''
+		border 1px solid $main_black
+		size(24px)
+
+	&:after
+		position absolute
+		top 10px
+		left 8px
+		content ''
+		border 1px solid $main_black
+		border-top none
+		border-right none
+		opacity 0
+		transition opacity .25s
+		transform rotate(-45deg)
+		size(9px, 6px)
+
+	a
+		position relative
+		text-decoration none
+		color $red
+		transition color .25s
+		&:after
+			position absolute
+			right 0
+			left 0
+			bottom 0
+			display block
+			height 1px
+			content ''
+			background-color $main_red + 30%
+			transition background-color .25s
+
+		&:hover
+			color $red - 30%
+			&:after
+				background-color $main_red
+
+.input-check:checked ~ .label:after
+	opacity 1

@@ -1,5 +1,6 @@
 include ../second-title/second-title
 include ../courses-slider/courses-slider
+include ../remodal-form/remodal-form
 
 mixin courses(title)
 	+b.courses&attributes(attributes)
@@ -8,3 +9,7 @@ mixin courses(title)
 		+second-title(title)._courses._line-t._line-m
 
 		+courses-slider(getData('courses')).js-courses-slider
+
+		+remodal('submit-order')._submit-order
+
+			+e('button')(data-remodal-action="close").close

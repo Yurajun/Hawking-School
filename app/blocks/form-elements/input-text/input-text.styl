@@ -10,18 +10,15 @@
 	border-width 1px
 	border-color $black_brown
 
-	&::-webkit-input-placeholder /* Chrome/Opera/Safari */
+	&::placeholder
 		color $black + 60%
 		opacity 1
 
-	&::-moz-placeholder /* Firefox 19+ */
-		color $black + 60%
-		opacity 1
-
-	&:-ms-input-placeholder /* IE 10+ */
-		color $black + 60%
-		opacity 1
-
-	&:-moz-placeholder /* Firefox 18- */
-		color $black + 60%
-		opacity 1
+	+ label.error
+		margin-top 5px
+		margin-bottom -10px
+		padding-left 20px
+		display block
+		font-family $pnr
+		font-size 16px
+		color $red
