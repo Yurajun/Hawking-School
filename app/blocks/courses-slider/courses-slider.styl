@@ -7,7 +7,7 @@
 			grid-template-rows 1fr 1fr
 			grid-template-columns 1fr 1fr
 	+m()
-		display block
+		display flex
 	+d()
 		display flex
 		justify-content space-between
@@ -29,9 +29,23 @@
 			margin-bottom 20px
 			display block
 			width 100%
+			height calc(100% - 18px)
+
+	.slick-track
+		+m()
+			display flex
+			height calc(100% - 18px)
+
+	.slick-slide
+		+m()
+			height auto
+			&>div
+				+m()
+					height 100%
 
 	.slick-arrow
 		position absolute
+		z-index 90
 		top 50%
 		font-size 0
 		line-height 0
@@ -53,6 +67,7 @@
 		border-left none
 
 	.slick-dots
+		width 100%
 		text-align center
 		li
 			display inline-block
@@ -82,9 +97,9 @@
 		width calc(100% - 60px)
 		min-width 230px
 		max-width 280px
+		height 100%
 	+d()
 		padding 52px 30px 30px 28px
-
 
 	&__direction
 		position absolute

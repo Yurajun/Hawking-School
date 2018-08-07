@@ -26,7 +26,7 @@ mixin courses-slider(arr)
 							+e('span') #{val['button_detail']}
 
 					if (val['soon'])
-						+e.soon !{val['soon']}
+						+e.soon.js-curses-open-popup !{val['soon']}
 
 					if (val['pre_set'])
 						+e.pre-set #{val['pre_set']}

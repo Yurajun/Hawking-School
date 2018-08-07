@@ -1,6 +1,12 @@
 include ../second-title/second-title
 include ../courses-slider/courses-slider
 include ../remodal-form/remodal-form
+include ../form-elements/input-text/input-text
+include ../form-elements/input-phone/input-phone
+include ../form-elements/input-check/input-check
+include ../form-elements/label/label
+include ../form-elements/button-submit/button-submit
+include ../form-elements/box-checkbox/box-checkbox
 
 mixin courses(title)
 	+b.courses&attributes(attributes)
@@ -12,4 +18,42 @@ mixin courses(title)
 
 		+remodal('submit-order')._submit-order
 
-			+e('button')(data-remodal-action="close").close
+			+e('button').close(data-remodal-action="close")
+
+			+second-title('Заявка на курс')._text-capitalize._submit-order
+
+			+remodal-form('POST', 'Y', '').js-form
+
+				+e('p').course-name.js-course-name
+
+				+e('p').course-context.js-course-context
+					| Оставьте предварительную заявку на курс <span>название курса</span> и мы пришлём вам индивидуальное приглашение на первый поток со скидкой 30%!
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('text','first_name', 'Имя', true, 'off')
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('text','last_name', 'Фамилия', true, 'off')
+
+				+e.form-field
+					//- name, placeholder, mask, required, autocomplete
+					+input-phone('phone', 'Телефон', '+7 (999) 999-99-99', true, 'off').js-phone-validation
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('email','email', 'Почта', true, 'off').js-email-validation
+
+				+e.form-field
+					//- name, id, value, checked, required
+					+box-checkbox
+						+input-check('courses_agree', 'courses-agree', 'accepted', true, true)
+						//- for
+						+label('courses-agree')
+							| Отправляя заявку, я соглашаюсь на обработку
+							+e('a')(href="javascript:;") персональных данных
+
+				+e.form-field
+					//- value
+					+button-submit('Отправить')

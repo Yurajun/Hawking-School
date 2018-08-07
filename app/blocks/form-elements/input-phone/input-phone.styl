@@ -5,8 +5,8 @@
 	height 40px
 	line-height 38px
 	color $black + 10%
-	border-width 1px
-	border-color $black_brown
+	border 1px solid $black_brown
+	outline none
 
 	&::placeholder
 		color $black + 60%
@@ -20,3 +20,6 @@
 		font-family $pnr
 		font-size 16px
 		color $red
+
+	&.error
+		border-color $main_red

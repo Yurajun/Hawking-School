@@ -61,6 +61,11 @@ $.validator.addMethod('js-phone-validation', function (value){
 
 $('.js-form[data-validate=Y]').each((ind, el) => {
 	$(el).validate({
-
+		highlight(element){
+			$(element).removeClass('success').addClass('error');
+		},
+		unhighlight(element){
+			$(element).removeClass('error');
+		}
 	});
 });

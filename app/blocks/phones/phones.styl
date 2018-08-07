@@ -65,68 +65,14 @@
 		&:hover
 			color $red
 
-	// &__link
-	// 	position relative
-	// 	text-decoration none
-	// 	color $white
-	// 	+t()
-	// 		display flex
-	// 		flex-direction column-reverse
-	// 	+d()
-	// 		padding-left 25px
-	// 	&:before
-	// 		position absolute
-	// 		left 0
-	// 		content ''
-	// 		background-size contain
-	// 		retinaBackground('icon-phone-white', 'png')
-	// 		+t()
-	// 			content none
-	// 		+d()
-	// 			top calc(50% - 1px)
-	// 			transform translateY(-50%)
-	// 			size(12px, 21px)
+	&_desctop
+		display flex
+		+m()
+			display none
 
-	// &__text
-	// 	position relative
-	// 	font-family $pnr
-	// 	transition color .25s
-	// 	+d()
-	// 		top -2px
-	// 		margin-right 13px
-	// 		font-size 14px
-	// 	&:before
-	// 		+t()
-	// 			position absolute
-	// 			left 0
-	// 			padding-left 22px
-	// 			bottom 0
-	// 			size(8px, 15px)
-	// 			retinaBackground('icon-phone-white', 'png')
-	// 	&:hover
-	// 		color $red
-
-	// 	&:after
-	// 		position absolute
-	// 		right 0
-	// 		left 0
-	// 		bottom 0
-	// 		height 1px
-	// 		content ''
-	// 		background-color $white
-	// 		opacity .4
-	// 		transition background-color .25s
-
-	// 	&:hover:after
-	// 		background-color $main_red
-
-	// &__phone
-	// 	position relative
-	// 	font-family $psb
-	// 	font-size 18px
-	// 	transition color .25s
-	// 	+t()
-	// 		margin-bottom 8px
-		
-	// 	&:hover
-	// 		color $red
+	&_mobile
+		display flex
+		+t()
+			display none
+		+d()
+			display none

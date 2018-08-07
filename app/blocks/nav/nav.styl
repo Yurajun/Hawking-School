@@ -2,6 +2,11 @@
 	position relative
 	z-index 21
 	height 100%
+	+m()
+		position absolute
+		top 0
+		left -15px
+		width 100vw
 
 	&__title-nav
 		font-size 0
@@ -10,16 +15,32 @@
 
 	&__list
 		display flex
-		width 398px
+		width 428px
 		height 100%
+		background-color $main_black
 		justify-content space-between
 		align-items center
+		+m()
+			position absolute
+			top 100%
+			padding-y(15px)
+			display none
+			overflow hidden
+			flex-direction column
+			width 100%
+			height auto
+			background-color $main_black
+		+d()
+			padding-x(15px)
 
 	&__item
 		position relative
 		display flex
 		height 100%
 		align-items center
+		+m()
+			margin 0 15px 19px //  0 19px 30px
+			display block
 
 		&>a
 			position relative
@@ -28,6 +49,8 @@
 			text-decoration none
 			color $white
 			transition color .25s
+			+m()
+				font-size 14px
 
 	a:hover
 		color $red
@@ -53,12 +76,22 @@
 		top 100%
 		left 0
 		padding-x(24px)
+		padding-y(10px)
 		display block
 		overflow hidden
 		width 280px
-		height 0
+		height auto
 		background-color $main_black
-		transition height .25s linear 0s, padding .25s linear 0s
+		+m()
+			position relative
+			padding-right 0
+			width 100%
+			min-height 0
+			transition min-height .25s linear 0s, padding .25s linear 0s
+		+d()
+			z-index -1
+			transition transform .25s linear 0s
+			transform translateY(-100%)
 
 		&-item
 			padding-y(10px)
@@ -66,6 +99,11 @@
 			width 100%
 			justify-content space-between
 			align-items flex-start
+			+m()
+				&:first-of-type
+					padding-top 0
+				&:last-of-type
+					padding-bottom 0
 
 			a
 				display inline-block
@@ -92,21 +130,100 @@
 				&:hover span:after
 					background-color $main_red - 40%
 
-
 			span
 				font-family $psb
 				font-size 16px
 				text-transform uppercase
 				color $red
+				+m()
+					font-size 12px
 
 
 	&__item:hover &__submenu
-		padding-y(10px)
-		overflow visible
-		height auto
+		+d()
+			transform translateY(0)
+			// padding-y(10px)
+			// overflow visible
+			// min-height 200px
+
+	&__item.is-active
+		margin-bottom 0
+
+	&__item.is-active &__submenu
+		+t()
+			padding-y(10px)
+			overflow visible
+			height auto
+		+m()
+			padding-y(16px)
+			min-height 187px
 
 	&__item:hover>a:after
-		top 6px
-		background-position 0 0
-		transform scale(-1)
+		+d()
+			top 6px
+			background-position 0 0
+			transform scale(-1)
 
+	&__item.is-active>a:after
+		+t()
+			top 6px
+			background-position 0 0
+			transform scale(-1)
+
+	&__burger
+		position absolute
+		top 50%
+		right 15px
+		cursor pointer
+		transform translateY(-50%)
+		size(24px, 15px)
+		span
+			position absolute
+			top 50%
+			background-color $main_white
+			transition background-color 0s linear .25s
+			transform translateY(-50%)
+			size(24px, 3px)
+
+			&:before
+				position absolute
+				top -6px
+				right 0
+				left 0
+				height 3px
+				content ''
+				background-color $main_white
+				transition top .25s linear .25s, transform .25s linear 0s
+				transform rotate(0deg)
+
+			&:after
+				position absolute
+				right 0
+				left 0
+				bottom -6px
+				height 3px
+				content ''
+				background-color $main_white
+				transition bottom .25s linear .25s, transform .25s linear 0s
+				transform rotate(0deg)
+
+		&.is-active span
+			background-color transparent
+			transition background-color 0s linear .25s
+
+		&.is-active span:before
+			top 0
+			transition top .25s linear 0s, transform .25s linear .25s
+			transform rotate(-45deg)
+		&.is-active span:after
+			bottom 0
+			transition bottom .25s linear 0s, transform .25s linear .25s
+			transform rotate(45deg)
+
+	&__burger
+		+t()
+			display none
+		+m()
+			display block
+		+d()
+			display none

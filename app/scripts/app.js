@@ -7,6 +7,7 @@ $(() => {
 	svg4everybody();
 });
 
+import '../blocks/nav/nav';
 import '../blocks/preview-item/preview-item';
 import '../blocks/info/info';
 import '../blocks/courses-slider/courses-slider';

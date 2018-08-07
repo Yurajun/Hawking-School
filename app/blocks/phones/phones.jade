@@ -7,19 +7,19 @@ include ../form-elements/textarea/textarea
 include ../form-elements/input-check/input-check
 include ../form-elements/label/label
 include ../form-elements/button-submit/button-submit
-
+include ../form-elements/box-checkbox/box-checkbox
 
 mixin phones()
 	+b.phones&attributes(attributes)
 		block
 
-		+e('a')(href="#" data-remodal-target="modal-question").question Задать вопрос
-		+e('a')(href="tel:+7 (4922) 21-32-39").tel
+		+e('a').question(href="#" data-remodal-target="modal-question") Задать вопрос
+		+e('a').tel(href="tel:+7 (4922) 21-32-39")
 			| +7 (4922) 21-32-39
 
 		+remodal('modal-question')._require-question
 
-			+e('button')(data-remodal-action="close").close
+			+e('button').close(data-remodal-action="close")
 
 			+second-title('Задать вопрос')._text-capitalize._require-question
 			//- method, validate, action
@@ -45,13 +45,14 @@ mixin phones()
 					//- name, placeholder, required, autocomplete
 					+textarea('text', 'Ваш вопрос', true, 'off', 5)
 
-				+e.form-field._checkbox
+				+e.form-field
 					//- name, id, value, checked, required
-					+input-check('signup_agree', 'signup-agree', 'accepted', true, true)
-					//- for
-					+label('signup-agree')
-						| Отправляя заявку, я соглашаюсь на обработку
-						+e('a')(href="javascript:;") персональных данных
+					+box-checkbox
+						+input-check('question_agree', 'question-agree', 'accepted', true, true)
+						//- for
+						+label('question-agree')
+							| Отправляя заявку, я соглашаюсь на обработку
+							+e('a')(href="javascript:;") персональных данных
 
 				+e.form-field
 					//- value

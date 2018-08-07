@@ -3,8 +3,10 @@ mixin nav()
 		block
 
 		+e('h2').title-nav Главное меню
+		+e('div').burger.js-burger-menu
+			+e('span')
 
-		+e.list
+		+e.list.js-nav-list
 			+e.item
 				+e('a')(href="about-us.html") О нас
 			+e.item
@@ -29,3 +31,5 @@ mixin nav()
 						+e('span') СКОРО!
 			+e.item
 				+e('a')(href="contacts") Контакты
+
+		+phones._mobile
