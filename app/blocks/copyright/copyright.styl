@@ -2,11 +2,30 @@
 	display block
 
 	p
-		margin-bottom 20px
 		font-family $pnr
-		font-size 16px
 		color $black
 		opacity .8
+		+t()
+			font-size 14px
+			line-height lh(14, 30)
+		+m()
+			font-size 12px
+			line-height lh(12, 18)
+			opacity 1
+		+d()
+			font-size 16px
+			line-height lh(16, 36)
 
-		&:last-of-type
-			margin-bottom 0
+	&__p
+
+		&_desctop
+			+t()
+				display none
+			+d()
+				display block
+
+		&_mobile
+			+t()
+				display block
+			+d()
+				display none

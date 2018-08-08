@@ -5,7 +5,9 @@ mixin info(arr)
 		each val, key in arr
 			+e.item
 				+e('picture').img.js-picture-icon
-					+e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" srcset="assets/images/#{val['icon'][1]}")
+					//- +e('source')(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" srcset="assets/images/#{val['icon'][1]}")
+					+e('source')(srcset="assets/images/#{val['icon'][3]}" media="(max-width: 767px)")
+					+e('source')(srcset="assets/images/#{val['icon'][2]}" media="(max-width: 1279px)")
 					+e('img')(src="assets/images/#{val['icon'][0]}")
 				+e.desc
 					| !{val[key]}

@@ -3,14 +3,30 @@
 
 	&__wrapper-section
 		position relative
-		display flex
 		justify-content stretch
+		display flex
+		// +t()
+		// 	display flex
+		// +m()
+		// 	display block
+		// 	background-color $main_black
+		// +d()
+		// 	display flex
 
 	&__wrapper-info
 		position relative
 		z-index 9
-		width 50%
+		display flex
+		background-color $main_black
 		flex-shrink 0
+		justify-content center
+		+t()
+			width 50%
+		+m()
+			margin-left -15px
+			width 100vw
+		+d()
+			width 50%
 
 	&__wrapper-map
 		position absolute
@@ -18,3 +34,9 @@
 		right 0
 		left 0
 		bottom 0
+		+t()
+			display block
+		+m()
+			display none
+		+d()
+			display block

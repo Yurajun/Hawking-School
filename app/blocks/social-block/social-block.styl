@@ -1,0 +1,49 @@
+.social-block
+	display flex
+	align-items center
+	+t()
+		flex-direction column
+
+	p
+		font-family $pnr
+		color $black
+		+t()
+			margin-bottom 20px
+			font-size 14px
+		+m()
+			margin-bottom 9px
+			font-size 12px
+			line-height 1.5
+		+d()
+			font-size 16px
+
+	&__list
+		display flex
+		align-items center
+
+	&__list-item
+		background-repeat no-repeat
+		background-position center center
+		background-size contain
+		+t()
+			margin-x(14px)
+
+	&__list-item_vk
+		retinaBackground('icon-vk', 'png')
+		+t()
+			size(37px, 23px)
+		+m()
+			size(31px, 19px)
+		+d()
+			margin-left 7px
+			size(25px, 15px)
+
+	&__list-item_inst
+		retinaBackground('icon-inst', 'png')
+		+t()
+			size(29px, 30px)
+		+m()
+			size(24px, 25px)
+		+d()
+			margin-left 12px
+			size(20px, 20px)

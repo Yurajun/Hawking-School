@@ -1,14 +1,14 @@
 {
 	"adress": {
 		"adress": "<p>г. Владимир, ул. Мира, д. 2г, пом.3 (Парк \"Университет\")</p>",
-		"icon": ["icon-pin.png", "icon-pin@2x.png"]
+		"icon": ["icon-pin.png", "icon-pin@2x.png", "icon-pin-tablet.png", "icon-pin-mobile.png"]
 	},
 	"phone": {
 		"phone": "<a href=\"tel:+7 (4922) 21-32-39\">+7 (4922) 21-32-39</a>",
-		"icon": ["icon-phone.png", "icon-phone@2x.png"]
+		"icon": ["icon-phone.png", "icon-phone@2x.png", "icon-phone-tablet.png", "icon-phone-mobile.png"]
 	},
 	"email": {
 		"email": "<a href=\"mailto:info@test.ru\">info@test.ru</a>",
-		"icon": ["icon-mail.png", "icon-mail@2x.png"]
+		"icon": ["icon-mail.png", "icon-mail@2x.png", "icon-mail-tablet.png", "icon-mail-mobile.png"]
 	}
 }

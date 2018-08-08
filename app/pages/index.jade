@@ -14,9 +14,9 @@ block head
 	- var pageTitle = 'Hawking School';
 
 block content
-	+main._page-head
+	+main._page-head.js-line-gradient
 		+container
-			+page-head
+			+page-head('70%', 'fadeInDown').js-waypoint.delay-3s
 
 	+section._about
 		+container

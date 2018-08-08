@@ -1,14 +1,12 @@
+include ../social-block/social-block
+
 mixin social-network()
 	+b.social-network&attributes(attributes)
 		block
 
 		+e.social-wrapper
 
-			+b.social-block
-				+e('p') Мы в социальных сетях:
-				+e.list
-					+e('a').list-item_vk(href="javascript")
-					+e('a').list-item_inst(href="javascript")
+			+social-block
 
 		+e.links-wrapper
 			+b('ul').helper-links

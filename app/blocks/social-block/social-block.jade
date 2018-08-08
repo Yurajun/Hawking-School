@@ -1,0 +1,8 @@
+mixin social-block()
+	+b.social-block&attributes(attributes)
+		block
+
+		+e('p') Мы в социальных сетях:
+		+e.list
+			+e('a').list-item_vk(href="javascript")
+			+e('a').list-item_inst(href="javascript")

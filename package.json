@@ -124,11 +124,17 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
+    "bowser": "^1.7.2",
     "eslint-plugin-pug": "^1.1.1",
     "heatmap.js": "^2.0.5",
+    "install": "^0.12.1",
     "jquery-mask-plugin": "^1.14.15",
     "jquery-validation": "^1.17.0",
+    "npm": "^6.3.0",
+    "picturefill": "^3.0.2",
     "remodal": "^1.1.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "waypoints": "^4.0.1"
   }
 }

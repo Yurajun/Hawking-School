@@ -1,12 +1,20 @@
 .info
 	display block
-	background-color $main_black
+	+t()
+		padding 43px 0 42px
+		width 300px
+	+m()
+		padding-y(28px)
 	+d()
 		padding 90px 190px 90px 90px
 
 	&__item
 		display flex
 		align-items center
+		+t()
+			margin-bottom 20px
+		+m()
+			margin-bottom 21px
 		+d()
 			margin-bottom 22px
 
@@ -19,23 +27,34 @@
 		justify-content center
 
 	&__desc
+		+t()
+			margin-left 15px
 		+d()
 			margin-left 48px
 
 		p
 			font-family $pnr
-			font-size 18px
 			line-height 1.2
 			color $white
+			+t()
+				font-size 16px
+			+m()
+				font-size 12px
+			+d()
+				font-size 18px
 
 		a
 			position relative
 			font-family $pnr
-			font-size 18px
-			line-height 1.2
 			text-decoration none
 			color $white
 			transition color .25s
+			+t()
+				font-size 16px
+			+m()
+				font-size 12px
+			+d()
+				font-size 18px
 
 			&:after
 				position absolute

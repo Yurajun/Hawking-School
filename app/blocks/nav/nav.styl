@@ -5,7 +5,7 @@
 	+t()
 		margin-x(35px)
 		max-width 398px
-		flex 1 1 auto
+		flex 1 1 100%
 	+m()
 		position absolute
 		top 0
@@ -51,10 +51,10 @@
 		&:last-of-type
 			display none
 			+m()
-				margin-top 40px
+				margin-top 30px
 				margin-bottom 2px
 				display flex
-				justify-content center
+				justify-content flex-start
 
 		&>a
 			position relative
@@ -115,6 +115,7 @@
 			justify-content space-between
 			align-items flex-start
 			+m()
+				justify-content flex-start
 				&:first-of-type
 					padding-top 0
 				&:last-of-type
@@ -125,33 +126,46 @@
 				line-height 1.2
 				text-decoration none
 
-				span
-					position relative
-					text-transform capitalize
-					color $white
-					transition color .25s
+			a span
+				position relative
+				font-size 16px
+				text-transform capitalize
+				color $white
+				transition color .25s
+				+m()
+					font-size 12px
 
-				span:after
-					position absolute
-					right 0
-					left 0
-					bottom 0
-					height 1px
-					content ''
-					background-color $main_white - 40%
-
+			a span:after
+				position absolute
+				right 0
+				left 0
+				bottom 0
+				height 1px
+				content ''
+				background-color $main_white - 40%
+			a
 				&:hover span
 					color $red
 				&:hover span:after
 					background-color $main_red - 40%
 
-			span
+			&>span
+				position relative
 				font-family $psb
-				font-size 16px
 				text-transform uppercase
 				color $red
+				+t()
+					top 1px
+					font-size 16px
+					line-height auto
 				+m()
+					top 4px
+					margin-left 30px
 					font-size 12px
+					line-height 1.2
+				+d()
+					font-size 18px
+					line-height auto
 
 
 	&__item:hover &__submenu

@@ -1,5 +1,5 @@
-mixin page-head()
-	+b.page-head&attributes(attributes)
+mixin page-head(offset, cls)
+	+b.page-head(data-offset="#{offset}" data-class="#{cls}")&attributes(attributes)
 		block
 
 		+e.H1 Обучаем востребованным<br /><span>интернет-профессиям</span>
