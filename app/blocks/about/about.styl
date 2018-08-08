@@ -1,6 +1,11 @@
 .about
-	padding 40px 0 45px
 	display block
+	+t()
+		padding 30px 0 40px
+	+m()
+		padding 29px 0 27px
+	+d()
+		padding 40px 0 45px
 
 	&__description
 		font-family $pnr
@@ -8,8 +13,10 @@
 		color $black_brown
 		+t()
 			font-size 16px
+			line-height 1.5
 		+m()
 			font-size 12px
+			line-height 1.5
 		+d()
 			font-size 18px
 			line-height 1.667
@@ -29,4 +36,3 @@
 				display block
 			+d()
 				display none
-

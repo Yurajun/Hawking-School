@@ -2,11 +2,17 @@
 	position relative
 	z-index 21
 	height 100%
+	+t()
+		margin-x(35px)
+		max-width 398px
+		flex 1 1 auto
 	+m()
 		position absolute
 		top 0
 		left -15px
+		margin-x(0)
 		width 100vw
+		max-width 100vw
 
 	&__title-nav
 		font-size 0
@@ -15,7 +21,6 @@
 
 	&__list
 		display flex
-		width 428px
 		height 100%
 		background-color $main_black
 		justify-content space-between
@@ -32,6 +37,7 @@
 			background-color $main_black
 		+d()
 			padding-x(15px)
+			width 428px
 
 	&__item
 		position relative
@@ -41,6 +47,14 @@
 		+m()
 			margin 0 15px 19px //  0 19px 30px
 			display block
+
+		&:last-of-type
+			display none
+			+m()
+				margin-top 40px
+				margin-bottom 2px
+				display flex
+				justify-content center
 
 		&>a
 			position relative
@@ -82,12 +96,13 @@
 		width 280px
 		height auto
 		background-color $main_black
+		+t()
+			display none
 		+m()
 			position relative
-			padding-right 0
+			padding 16px 0 0 24px
+			display none
 			width 100%
-			min-height 0
-			transition min-height .25s linear 0s, padding .25s linear 0s
 		+d()
 			z-index -1
 			transition transform .25s linear 0s
@@ -142,21 +157,6 @@
 	&__item:hover &__submenu
 		+d()
 			transform translateY(0)
-			// padding-y(10px)
-			// overflow visible
-			// min-height 200px
-
-	&__item.is-active
-		margin-bottom 0
-
-	&__item.is-active &__submenu
-		+t()
-			padding-y(10px)
-			overflow visible
-			height auto
-		+m()
-			padding-y(16px)
-			min-height 187px
 
 	&__item:hover>a:after
 		+d()

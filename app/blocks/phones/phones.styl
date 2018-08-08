@@ -3,6 +3,8 @@
 	+t()
 		flex-direction column-reverse
 		align-items flex-start
+	+m()
+		align-items center
 	+d()
 		align-items center
 
@@ -15,6 +17,8 @@
 		+t()
 			margin-left 23px
 			font-size 14px
+		+m()
+			font-size 12px
 		+d()
 			margin-right 13px
 			margin-left 25px
@@ -29,6 +33,9 @@
 			+t()
 				left -23px
 				bottom 1px
+				size(8px, 15px)
+			+m()
+				bottom -1px
 				size(8px, 15px)
 			+d()
 				top calc(50%)
@@ -71,8 +78,9 @@
 			display none
 
 	&_mobile
-		display flex
 		+t()
 			display none
+		+m()
+			display flex
 		+d()
 			display none

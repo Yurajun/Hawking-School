@@ -6,6 +6,16 @@ include ../scripts/scripts
 include ../header/header
 include ../footer/footer
 
+include ../second-title/second-title
+include ../remodal-form/remodal-form
+include ../form-elements/input-text/input-text
+include ../form-elements/input-phone/input-phone
+include ../form-elements/textarea/textarea
+include ../form-elements/input-check/input-check
+include ../form-elements/label/label
+include ../form-elements/button-submit/button-submit
+include ../form-elements/box-checkbox/box-checkbox
+
 doctype html
 html(lang='ru')
 	include ../head/head
@@ -15,5 +25,46 @@ html(lang='ru')
 			+header
 			block content
 			+footer
+
+		+remodal('modal-question')._require-question
+
+			+e('button').close(data-remodal-action="close")
+
+			+second-title('Задать вопрос')._text-capitalize._require-question
+			//- method, validate, action
+			+remodal-form('POST', 'Y', '').js-form
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('text','first_name', 'Имя', true, 'off')
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('text','last_name', 'Фамилия', true, 'off')
+
+				+e.form-field
+					//- name, placeholder, mask, required, autocomplete
+					+input-phone('phone', 'Телефон', '+7 (999) 999-99-99', true, 'off').js-phone-validation
+
+				+e.form-field
+					//- type, name, placeholder, required, autocomplete
+					+input-text('email','email', 'Почта', true, 'off').js-email-validation
+
+				+e.form-field
+					//- name, placeholder, required, autocomplete
+					+textarea('text', 'Ваш вопрос', true, 'off', 5)
+
+				+e.form-field
+					//- name, id, value, checked, required
+					+box-checkbox
+						+input-check('question_agree', 'question-agree', 'accepted', true, true)
+						//- for
+						+label('question-agree')
+							| Отправляя заявку, я соглашаюсь на обработку
+							+e('a')(href="javascript:;") персональных данных
+
+				+e.form-field
+					//- value
+					+button-submit('Отправить')
 
 		+scripts(['app.min.js'])
